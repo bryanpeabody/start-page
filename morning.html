@@ -26,6 +26,7 @@
             <hr />
 
             <!-- Sports -->
+        <h2>Today's Games</h2>
             <div id="sportsContent"></div>
             <!-- End sports -->
 
@@ -58,7 +59,7 @@
         $( document ).ready(function() {
             $("#query").focus();
         });
-
+        
         function doSubmit() {
             let query = document.getElementById("query").value
             window.location = 'https://www.google.com/search?q=' + query;
