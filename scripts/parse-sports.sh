@@ -18,9 +18,9 @@ echo "<br />" >> $outfile
 
 case "$(date +%a)" in
   Mon)
-    echo "<i class='fa-solid fa-medal'></i> &nbsp;&nbsp; WWE Raw 08:00pm" >> $outfile
+    echo "<i class='fa-solid fa-medal'></i> &nbsp;&nbsp; WWE Raw 08:00 PM" >> $outfile
     ;;
   Fri)
-    echo "<i class='fa-solid fa-medal'></i> &nbsp;&nbsp; WWE Smackdown 08:00pm" >> $outfile
+    echo "<i class='fa-solid fa-medal'></i> &nbsp;&nbsp; WWE Smackdown 08:00 PM" >> $outfile
     ;;
 esac
