@@ -1,20 +1,38 @@
 #!/bin/bash
 
 now=`date +%m/%d`
+enow=`date +%d/%m`
 outfile="../sports.html"
 
 baseballicon="<i class='fa-solid fa-baseball'></i> &nbsp;&nbsp;"
+soccericon="<i class='fa-solid fa-futbol'></i> &nbsp;&nbsp;"
 
-game=`grep $now dodgers-2024.csv | awk -F "," '{ print $4 " " $3}'`
-echo $baseballicon $game > $outfile
+# Dodgers
+game=`grep $now dodgers-2024.csv | awk -F "," '{ print $4 " - " $3}'`
+ if [ ! -z "$game" ]; then
+  echo $baseballicon $game > $outfile
+  echo "<br />" >> $outfile
+fi
 
-echo "<br />" >> $outfile
+# Cubs
+game=`grep $now cubs-2024.csv | awk -F "," '{ print $4 " - " $3}'`
+if [ ! -z "$game" ]; then
+  echo $baseballicon $game >> $outfile
+  echo "<br />" >> $outfile
+fi
 
-game=`grep $now cubs-2024.csv | awk -F "," '{ print $4 " " $3}'`
-echo $baseballicon $game >> $outfile
+# FC Barcelona
+game=`grep $now fc-barcelona-2024.csv | awk -F "," '{print $6 " at " $5}'`
+time=`grep $now fc-barcelona-2024.csv | awk -F "," '{print $3}' | awk -F " " '{print " - " $2}'`
 
-echo "<br />" >> $outfile
+if [ ! -z "$game" ]; then
+  echo $soccericon $game $time >> $outfile
+  echo "<br />" >> $outfile
+fi
 
+# FC Bayern Munich
+
+# WWE
 case "$(date +%a)" in
   Mon)
     echo "<i class='fa-solid fa-medal'></i> &nbsp;&nbsp; WWE Raw 08:00 PM" >> $outfile
