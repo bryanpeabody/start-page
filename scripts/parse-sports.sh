@@ -23,3 +23,5 @@ case "$(date +%a)" in
     echo "<i class='fa-solid fa-medal'></i> &nbsp;&nbsp; WWE Smackdown 08:00 PM" >> $outfile
     ;;
 esac
+
+./sync-files.sh
