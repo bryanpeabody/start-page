@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#now=`date +%m/%d`
-now="07/02"
+now=`date +%m/%d`
 outfile="../sports.html"
 
 baseballicon="<i class='fa-solid fa-baseball'></i> &nbsp;&nbsp;"
