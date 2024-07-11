@@ -6,6 +6,8 @@ outfile="../sports.html"
 
 baseballicon="<i class='fa-solid fa-baseball'></i> &nbsp;&nbsp;"
 soccericon="<i class='fa-solid fa-futbol'></i> &nbsp;&nbsp;"
+hockeyicon="<i class='fa-solid fa-hockey-puck'></i> &nbsp;&nbsp;"
+baseketballicon="<i class='fa-solid fa-basketball'></i> &nbsp;&nbsp;"
 
 # Dodgers
 game=`grep $now dodgers-2024.csv | awk -F "," '{ print $4 " - " $3}'`
@@ -31,6 +33,10 @@ if [ ! -z "$game" ]; then
 fi
 
 # FC Bayern Munich
+
+# Champions League
+
+# Florida Panthers
 
 # WWE
 case "$(date +%a)" in
